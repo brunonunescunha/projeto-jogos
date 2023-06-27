@@ -1,0 +1,117 @@
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 13%, rgba(0,0,0,0.26934523809523814) 50%, rgb(0, 0, 0) 87%);
+    z-index: -1;
+}
+
+.carrossel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.carrossel .imagem{
+    background: center no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: .7s ease-in-out;
+}
+
+.carrossel .imagem.ativo{
+    opacity: 1;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.conteudo .informacoes .logo{
+    max-width: 350px;
+    margin-bottom: 80px;
+}
+
+.conteudo .informacoes .logo.dont-starve{
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.conteudo .informacoes .descricao{
+    width: 49%;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.conteudo .botoes-carrossel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.conteudo .botoes-carrossel .botao{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.conteudo .botoes-carrossel .botao:hover,
+.conteudo .botoes-carrossel .botao.selecionado{
+    background-color: #1832c6;
+}
+
+.conteudo .informacoes{
+    display: none;
+}
+
+.conteudo .informacoes.ativa{
+    display: block;
+}
+
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-lateral .icone{
+    width: 40px;
+    filter: invert(1);
+    transition: .3s ease-in-out;
+}
+
+.menu-lateral .icone:hover{
+    transform: scale(1.2);
+}
+
